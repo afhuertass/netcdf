@@ -13,7 +13,7 @@ defmodule NetCDF.Native do
     crate: "ex_netcdf",
     base_url: "#{github_url}/releases/download/v#{version}",
     version: version,
-    force_build: force_build,
+    force_build: true,
     targets: [
       "aarch64-unknown-linux-gnu",
       "aarch64-apple-darwin",
