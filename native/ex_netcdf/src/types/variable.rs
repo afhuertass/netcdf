@@ -1,8 +1,7 @@
+use crate::types::value::Value;
+use ndarray::Array;
 use rustler::types::atom::Atom;
 use rustler::NifStruct;
-
-use crate::types::value::Value;
-
 #[derive(NifStruct)]
 #[module = "NetCDF.Variable"]
 pub struct NetCDFVariable {
@@ -10,6 +9,7 @@ pub struct NetCDFVariable {
     pub value: Value,
     pub r#type: Atom,
     pub attributes: Vec<(String, Value)>,
+    pub shape: Option<Vec<usize>>,
 }
 
 impl NetCDFVariable {

@@ -1,4 +1,4 @@
-use netcdf::attribute::AttrValue;
+use netcdf::AttributeValue;
 use rustler::types::atom::Atom;
 use rustler::{Env, Term};
 
@@ -66,31 +66,31 @@ impl rustler::Encoder for Value {
     }
 }
 
-impl From<AttrValue> for Value {
-    fn from(value: AttrValue) -> Value {
+impl From<AttributeValue> for Value {
+    fn from(value: AttributeValue) -> Value {
         match value {
-            AttrValue::Uchar(value) => Self::Uchar(value),
-            AttrValue::Schar(value) => Self::Schar(value),
-            AttrValue::Ushort(value) => Self::Ushort(value),
-            AttrValue::Short(value) => Self::Short(value),
-            AttrValue::Uint(value) => Self::Uint(value),
-            AttrValue::Int(value) => Self::Int(value),
-            AttrValue::Ulonglong(value) => Self::Ulonglong(value),
-            AttrValue::Longlong(value) => Self::Longlong(value),
-            AttrValue::Float(value) => Self::Float(value),
-            AttrValue::Double(value) => Self::Double(value),
-            AttrValue::Str(value) => Self::Str(value),
-            AttrValue::Uchars(value) => Self::Uchars(value),
-            AttrValue::Schars(value) => Self::Schars(value),
-            AttrValue::Ushorts(value) => Self::Ushorts(value),
-            AttrValue::Shorts(value) => Self::Shorts(value),
-            AttrValue::Uints(value) => Self::Uints(value),
-            AttrValue::Ints(value) => Self::Ints(value),
-            AttrValue::Ulonglongs(value) => Self::Ulonglongs(value),
-            AttrValue::Longlongs(value) => Self::Longlongs(value),
-            AttrValue::Floats(value) => Self::Floats(value),
-            AttrValue::Doubles(value) => Self::Doubles(value),
-            AttrValue::Strs(value) => Self::Strs(value),
+            AttributeValue::Uchar(value) => Self::Uchar(value),
+            AttributeValue::Schar(value) => Self::Schar(value),
+            AttributeValue::Ushort(value) => Self::Ushort(value),
+            AttributeValue::Short(value) => Self::Short(value),
+            AttributeValue::Uint(value) => Self::Uint(value),
+            AttributeValue::Int(value) => Self::Int(value),
+            AttributeValue::Ulonglong(value) => Self::Ulonglong(value),
+            AttributeValue::Longlong(value) => Self::Longlong(value),
+            AttributeValue::Float(value) => Self::Float(value),
+            AttributeValue::Double(value) => Self::Double(value),
+            AttributeValue::Str(value) => Self::Str(value),
+            AttributeValue::Uchars(value) => Self::Uchars(value),
+            AttributeValue::Schars(value) => Self::Schars(value),
+            AttributeValue::Ushorts(value) => Self::Ushorts(value),
+            AttributeValue::Shorts(value) => Self::Shorts(value),
+            AttributeValue::Uints(value) => Self::Uints(value),
+            AttributeValue::Ints(value) => Self::Ints(value),
+            AttributeValue::Ulonglongs(value) => Self::Ulonglongs(value),
+            AttributeValue::Longlongs(value) => Self::Longlongs(value),
+            AttributeValue::Floats(value) => Self::Floats(value),
+            AttributeValue::Doubles(value) => Self::Doubles(value),
+            AttributeValue::Strs(value) => Self::Strs(value),
         }
     }
 }
