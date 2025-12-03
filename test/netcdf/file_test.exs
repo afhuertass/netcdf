@@ -8,10 +8,9 @@ defmodule NetCDF.FileTest do
 
   describe "open/1" do
     test "Loads data from existing file" do
-      assert {:ok, %File{filename: @filename, resource: resource, variables: variables}} =
+      assert {:ok, %File{filename: @filename, variables: variables}} =
                File.open(@filename)
 
-      assert is_reference(resource)
       assert variables == ~w(lat lon time temp)
     end
 
